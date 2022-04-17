@@ -1,0 +1,67 @@
+const Engine = Matter.Engine;
+const World = Matter.World;
+const Bodies = Matter.Bodies;
+const Constraint = Matter.Constraint;
+
+var engine, world;
+var box1, box2, box3,box4,box5,box6,box7,box8,box9,box10,box11,box12,box13,box14,box15,box16,box17,box18,box19,box20, ground;
+var ball, rope
+
+function setup() {
+  createCanvas(3000, 800);
+  engine = Engine.create();
+  world = engine.world;
+
+  // creating ground 
+
+  //creating boxes-box1-box20
+
+  box1 = new Box(900, 100, 70, 70);
+  
+  box6 = new Box(900, 100, 70, 70);
+  box7 = new Box(800, 100, 70, 70);
+  
+  box12 = new Box(800, 100, 70, 70);
+  box13 = new Box(700, 100, 70, 70);
+  
+  box20 = new Box(700, 100, 70, 70);
+
+  //creating ball
+  
+
+  rope = new Rope(ball.body, { x: 500, y: 50 });
+
+}
+
+function draw() {
+  background(180);
+  Engine.update(engine);
+  //display ground
+ 
+  //display all the boxes
+  box1.display();
+  
+  box6.display()
+  box7.display()
+  
+  box12.display()
+  box13.display()
+  
+  box20.display()
+  
+
+  //display ball
+  
+  rope.display();
+
+
+
+}
+
+//write function to move the ball  with mouse dragged
+
+function mouseDragged() {
+  
+}
+
+
